@@ -3,13 +3,7 @@ import ChildA from "./ChildA";
 import ChildB from "./ChildB";
 import Button from "./Button";
 import ChildC from "./ChildC";
-
-const parentStyle = {
-  border: "1px solid black",
-  margin: "10px",
-  padding: "10px",
-  maxWidth: "200px",
-};
+import StyledDiv from "./StyledDiv";
 
 const Parent = () => {
   const [number, setNumber] = useState(0);
@@ -21,12 +15,12 @@ const Parent = () => {
   return (
     <>
       <h1>React Concepts</h1>
-      <div style={parentStyle}>
+      <StyledDiv>
         <button onClick={() => setNumber((number) => number + 1)}>+</button>
         <ChildA number={number} setNumber={setNumber} />
         <ChildB number={number} text={<button onClick={clickHandler}>+</button>} />
         <ChildC number={number} button={<Button clickHandler={clickHandler} />} />
-      </div>
+      </StyledDiv>
     </>
   );
 };
