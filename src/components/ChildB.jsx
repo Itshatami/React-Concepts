@@ -3,11 +3,12 @@ const childStyle = {
   margin: "10px",
   padding: "10px",
 };
-const ChildB = ({ number }) => {
+const ChildB = ({ number, text }) => {
   return (
     <div style={childStyle}>
       <h3>Child B</h3>
       <p>{number}</p>
+      {text}
     </div>
   );
 };
