@@ -1,4 +1,5 @@
 // import Parent from "./components/Parent";
+import WelcomeMessage from "./components/WelcomeMessage";
 import WelcomePage from "./components/WelcomePage";
 
 function App() {
@@ -6,7 +7,10 @@ function App() {
     <>
       <h1>React Concepts</h1>
       {/* <Parent /> */}
-      <WelcomePage username="alireza" />
+      {/* <WelcomePage username="alireza" /> */}
+      <WelcomePage>
+        <WelcomeMessage username="Alireza" />
+      </WelcomePage>
     </>
   );
 }
